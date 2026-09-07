@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html { font-size: 16px;}
 
 body {
@@ -5,17 +11,21 @@ body {
     font-weight: 200;
     color: rgb(188, 220, 215);
     font-style: normal;
-    background-color: rgb(44, 16, 75);
+    background-color
+    : rgb(44, 16, 75);
 }
 
+/* Headers */
 h1 {
     font-size: 3rem;
     display: flex;
     justify-content: center;
 }
+
 h2  {
     font-size: 2.5rem;
 }
+
 h3 {
     font-size: 1.75rem;
     display: flex;
@@ -27,11 +37,9 @@ h1, h2, h3 {
 }
 
 main {
-    margin-top: 50px;
+    margin-top: 3rem;
     margin-bottom: 30px;
-    align-content: center;
-
-    
+    align-content: center;    
 }
 
 /* Navigation Bar */
@@ -72,11 +80,14 @@ header {
     width: 100%;
 }
 
-/** Home **/
+/** Home Page **/
 
 .hero{
     text-align: center;
     margin: 1rem;
+}
+.hero p {
+    margin-bottom: 3rem;
 }
 .logo {
     width: 100px;
@@ -125,7 +136,7 @@ header {
     box-shadow: 0 0 18px rgba(188, 220, 215, 0.65);
     background-repeat: repeat;
     background-size: 80%;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 /*.featured-illustration {
@@ -154,7 +165,7 @@ header {
     box-shadow: 0 0 18px rgba(188, 220, 215, 0.65);
     background-repeat: repeat;
     background-size: 80%;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .know-guy {
@@ -172,18 +183,22 @@ header {
     box-shadow: 0 0 18px rgba(188, 220, 215, 0.65);
     background-repeat: repeat;
     background-size: 80%;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 figure {
-    margin: 2rem auto;
+    margin: 1rem auto;
     text-align: center;
 }
-img{
+
+.home figcaption {
+    padding-bottom: 2rem;
+}
+/*img {
     width: 100%;
     max-width: 800px;
     height:auto;
-}
+}*/
 
 /** Art that Moves **/
 
@@ -284,7 +299,7 @@ figcaption {
     padding: 2rem;
     display: flex;
     gap: 15px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 2rem auto;
     justify-content: center;
 }
@@ -308,7 +323,7 @@ figcaption {
     padding: 2rem;
     display: flex;
     gap: 15px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 2rem auto;
     justify-content: center;
 }
@@ -324,7 +339,7 @@ figcaption {
 .art-grid {
     width: 90%;
     max-width: 1200px;
-    margin: 100px auto 75px;
+    margin: 2rem auto 75px;
 }
 
 /** About **/
@@ -348,6 +363,7 @@ figcaption {
 }
 
 .about img {
+    width: 100%;
     max-width: 600px;
 }
 
@@ -374,4 +390,60 @@ footer {
 
 footer img {
     max-width: 40px;
+}
+
+@media screen and (max-width:600px) {
+
+    /* Homepage */
+    .featured-animation,
+    .featured-illustration,
+    .know-guy {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+
+    main {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+/* Art That Moves */
+
+    .video-showcase {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-single {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Art That Doesn't */
+
+    .art-box {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;        
+    }
+
+    .art-box img {
+        width: 100%;
+        max-width: 600px;
+    }
+
 }
