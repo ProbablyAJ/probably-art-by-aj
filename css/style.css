@@ -455,7 +455,8 @@ footer img {
     footer {
         gap: 1rem;
         padding: 0.4rem;
-        font-family: 'Jolly Lodger', sans-serif;
+        font-family:"Jolly Lodger", sans-serif;
+        color: rgb(44, 16, 75);
     }
 
 }
