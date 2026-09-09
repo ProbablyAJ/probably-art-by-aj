@@ -392,8 +392,13 @@ footer {
 footer img {
     max-width: 40px;
     height: auto;
+    
 }
 
+footer p {
+            font-family:"Jolly Lodger", sans-serif;
+        color: rgb(44, 16, 75);
+}
 @media screen and (max-width:600px) {
 
     /* Homepage */
